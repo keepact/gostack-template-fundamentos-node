@@ -25,13 +25,13 @@ class TransactionsRepository {
 
   public getBalance(): Balance {
     const income = this.transactions.reduce(
-      (acumulator, object) =>
-        acumulator + (object.type === 'income' ? object.value : 0),
+      (accumulator, object) =>
+        accumulator + (object.type === 'income' ? object.value : 0),
       0,
     );
     const outcome = this.transactions.reduce(
-      (acumulator, object) =>
-        acumulator + (object.type === 'outcome' ? object.value : 0),
+      (accumulator, object) =>
+        accumulator + (object.type === 'outcome' ? object.value : 0),
       0,
     );
 
